@@ -1,5 +1,5 @@
 const string =
-  "Smart people learn from and everyone, average people from their, stupid people already, have all the answers";
+  "Smart people learn from everything and everyone, average people from their experience, stupid people already, have all the answers";
 
 //Replace special characters and then convert to array.
 const stringToArray = string
