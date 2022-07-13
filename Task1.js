@@ -1,8 +1,11 @@
 const string =
-  "Smart people learn from everything and everyone, average people from their experience, stupid people already, have all the answers";
+  "Smart people learn from and everyone, average people from their, stupid people already, have all the answers";
+
+//Replace special characters and then convert to array.
 const stringToArray = string
   .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, "")
   .split(" ");
+
 const sortedString = sorting(stringToArray);
 const highestWords = findMultipleHighestWork(
   sortedString[0].length,
@@ -14,6 +17,7 @@ const result = countVowelAndSort(highestWords);
 console.log("*****output******");
 console.log(result[0].value);
 
+//then sort array into desc order.
 function sorting(array) {
   for (var i = 0; i < array.length; i++) {
     for (var j = 0; j < array.length - i - 1; j++) {
@@ -27,6 +31,7 @@ function sorting(array) {
   return array;
 }
 
+//then find words with same length
 function findMultipleHighestWork(size, array) {
   const tempArray = [];
   for (let i = 0; i < array.length; i++) {
@@ -37,6 +42,7 @@ function findMultipleHighestWork(size, array) {
   return tempArray;
 }
 
+//then find words with max number of vowels.
 function countVowelAndSort(array) {
   const tempArray = [];
   for (var i = 0; i < array.length; i++) {
